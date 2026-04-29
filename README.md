@@ -1,37 +1,80 @@
-# Monster Tapper ⚔️🐉
+# Rialo Network Tycoon
 
-A premium, juicy Idle/Clicker Web Game built purely with Vanilla HTML, CSS, and JavaScript. 
-Ready to be deployed on GitHub Pages as a portfolio piece!
+A premium idle/clicker web game inspired by validator operations on the Rialo network. Built with pure HTML, CSS, and JavaScript — no frameworks, no build step required.
 
-## ✨ Features
-- **Premium Aesthetics:** Glassmorphism UI, animated tech-grid background, glowing orbs, and smooth CSS animations.
-- **RPG Progression:** Fight monsters through stages. Max HP scales exponentially. Every 10 stages is an Epic Boss!
-- **Boss Mechanics:** Epic Bosses have 5x Health and must be defeated within a 30-second time limit, or you get knocked back a stage.
-- **Juicy Game Feel:** Screen shake, dynamic floating damage numbers, critical hits (10% chance for 5x damage), and a massive physics-based coin explosion when monsters die!
-- **Upgrades & Auto-DPS:** Hire peasants, mercenaries, and archmages to deal automatic Damage Per Second (DPS) to the monsters.
-- **Custom Assets:** 10 unique AI-generated monsters and 3 rotating weapon cursors. 
-- **Web Audio API:** 100% procedural synthesized sound effects (hits, crits, purchases, and boss clears)—no external audio files required!
-- **Save & Load:** Progress (Stage, Tokens, Upgrades, Monster HP) is automatically saved to `localStorage` every 5 seconds.
-- **Offline Progress:** Close the tab and come back later to claim the gold your mercenaries farmed while you were away.
+## 🎮 Features
+
+### Core Gameplay
+- Click the validator node to process transactions and earn `$RIA`
+- 9 upgrade tiers (T1 Basic → T2 Pro → T3 Legendary) for deep progression
+- Buy 1, Buy 10, or Max purchase modes
+- Stake 50% of `$RIA` for permanent earning multiplier
+- Hard Fork (prestige) system — reset for permanent Hashpower boosts
+- 10M `$RIA` goal with mission tracking
+
+### Combat & Events
+- **Boss Slashing Events** every 10 epochs with timer pressure
+- **DDoS Mini-Game** — tap moving threats to restore income
+- **Lucky Box** 🎁 — random gift boxes spawn across the screen with 5 reward types
+- **Coin Rain** 🌧️ — falling coins to tap and collect
+
+### Active Skills & Modes
+- **Overclock** ⚡ — 3x click power + 30% crit chance for 8 seconds
+- **Fever Mode** 🔥 — tap 15 times in 3 seconds for x5 everything
+- **Combo System** — build up to x5.0 multiplier with rapid clicking
+- **Critical Hits** — random crits deal 5x damage with golden flash
+
+### Visual Polish
+- Dynamic node that moves randomly across the entire screen
+- Screen shake on boss encounters
+- Particle effects on every click
+- Color-coded floating damage numbers (normal/overclock/crit)
+- Node aura that scales with TPS
+- Fever mode scanline overlay effect
+
+### UI/UX
+- Achievement system (10 achievements with banner notifications)
+- Statistics panel (taps, earnings, epochs, bosses, crits)
+- Custom modals for Hard Fork and Reset (no browser dialogs)
+- Offline earnings modal with time-away calculation
+- Auto-save with visual indicator
+- Keyboard shortcuts: `Space` = tap, `O` = overclock
+- Combo sound with pitch scaling
+- Responsive layout for desktop and mobile
 
 ## 🚀 How to Play
-1. **Smash the Monster:** Click the monster floating around the screen to deal damage and earn gold. Click fast to build up a **Combo Multiplier** (up to x5)!
-2. **Buy Upgrades:** Spend your tokens (gold) on the right panel to hire units that automatically attack the monster.
-3. **Synergy Bonus:** Every 5 upgrades purchased increases your manual click power.
-4. **Beat the Boss:** When you reach stage 10, 20, 30..., you have 30 seconds to kill the Epic Boss. Click as fast as you can!
-5. **Catch the Loot:** Watch out for the random flying money bag for a massive token injection.
 
-## 🛠️ Tech Stack
-- **HTML5**
-- **CSS3** (Variables, Flexbox, Keyframes, Custom Cursors, Media Queries)
-- **Vanilla JavaScript** (DOM manipulation, Custom Game Loop, Web Audio API, LocalStorage, Custom Physics Engine for coins)
+1. Open `index.html` in a browser
+2. Click/tap the floating validator node to earn `$RIA`
+3. Buy upgrades in the right panel to increase passive income
+4. Survive boss slashing events before the timer runs out
+5. Catch Lucky Boxes and Coin Rain for bonus rewards
+6. Tap fast enough to trigger Fever Mode (x5 everything!)
+7. Use Hard Fork when available to prestige for permanent boosts
 
-## 🎮 Setup (Local)
-No build step required! Simply clone the repo and open `index.html` in your favorite web browser.
+## 🛠 Tech Stack
+
+- HTML5
+- CSS3 (animations, glassmorphism, gradients)
+- Vanilla JavaScript
+- Web Audio API (dynamic sound effects)
+- LocalStorage (save/load with stats persistence)
+
+## 📦 Local Setup
+
+No install required. Just open:
+
+```
+index.html
+```
 
 ## 🌐 Deploy to GitHub Pages
-1. Push this repository to GitHub.
-2. Go to your repository settings.
-3. Navigate to **Pages** on the left sidebar.
-4. Under "Build and deployment", set the source to `Deploy from a branch` and select the `main` branch.
-5. Save, wait a minute, and share your link with the world!
+
+1. Push this repository to GitHub
+2. Go to repository Settings → Pages
+3. Set source to deploy from `main` branch
+4. Save and wait for GitHub Pages to publish
+
+## 📄 License
+
+MIT
