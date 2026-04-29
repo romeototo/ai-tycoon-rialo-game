@@ -1,80 +1,78 @@
-# Rialo Network Tycoon
+<div align="center">
 
-A premium idle/clicker web game inspired by validator operations on the Rialo network. Built with pure HTML, CSS, and JavaScript — no frameworks, no build step required.
+# 🎮 Rialo Network Tycoon
 
-## 🎮 Features
+### Premium Idle/Clicker Web Game with AI Network Theme
 
-### Core Gameplay
-- Click the validator node to process transactions and earn `$RIA`
-- 9 upgrade tiers (T1 Basic → T2 Pro → T3 Legendary) for deep progression
-- Buy 1, Buy 10, or Max purchase modes
-- Stake 50% of `$RIA` for permanent earning multiplier
-- Hard Fork (prestige) system — reset for permanent Hashpower boosts
-- 10M `$RIA` goal with mission tracking
+[![Play Now](https://img.shields.io/badge/▶_Play_Now-00D9FF?style=for-the-badge&logo=google-chrome&logoColor=white)](https://romeototo.github.io/ai-tycoon-rialo-game/)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow?style=for-the-badge)](LICENSE)
 
-### Combat & Events
-- **Boss Slashing Events** every 10 epochs with timer pressure
-- **DDoS Mini-Game** — tap moving threats to restore income
-- **Lucky Box** 🎁 — random gift boxes spawn across the screen with 5 reward types
-- **Coin Rain** 🌧️ — falling coins to tap and collect
+<img src="assets/screenshots/gameplay.png" alt="Rialo Network Tycoon Gameplay" width="800" />
 
-### Active Skills & Modes
-- **Overclock** ⚡ — 3x click power + 30% crit chance for 8 seconds
-- **Fever Mode** 🔥 — tap 15 times in 3 seconds for x5 everything
-- **Combo System** — build up to x5.0 multiplier with rapid clicking
-- **Critical Hits** — random crits deal 5x damage with golden flash
+</div>
 
-### Visual Polish
-- Dynamic node that moves randomly across the entire screen
-- Screen shake on boss encounters
-- Particle effects on every click
-- Color-coded floating damage numbers (normal/overclock/crit)
-- Node aura that scales with TPS
-- Fever mode scanline overlay effect
+---
 
-### UI/UX
-- Achievement system (10 achievements with banner notifications)
-- Statistics panel (taps, earnings, epochs, bosses, crits)
-- Custom modals for Hard Fork and Reset (no browser dialogs)
-- Offline earnings modal with time-away calculation
-- Auto-save with visual indicator
-- Keyboard shortcuts: `Space` = tap, `O` = overclock
-- Combo sound with pitch scaling
-- Responsive layout for desktop and mobile
+## 📖 About
 
-## 🚀 How to Play
+**Rialo Network Tycoon** is a premium idle/clicker web game where you build and manage an AI-powered decentralized network. Tap the Rialo validator node, earn **$RIA tokens**, purchase upgrades, and expand your network infrastructure through multiple epochs.
 
-1. Open `index.html` in a browser
-2. Click/tap the floating validator node to earn `$RIA`
-3. Buy upgrades in the right panel to increase passive income
-4. Survive boss slashing events before the timer runs out
-5. Catch Lucky Boxes and Coin Rain for bonus rewards
-6. Tap fast enough to trigger Fever Mode (x5 everything!)
-7. Use Hard Fork when available to prestige for permanent boosts
+Inspired by the Web3 ecosystem and blockchain validator networks.
 
-## 🛠 Tech Stack
+## ✨ Features
 
-- HTML5
-- CSS3 (animations, glassmorphism, gradients)
-- Vanilla JavaScript
-- Web Audio API (dynamic sound effects)
-- LocalStorage (save/load with stats persistence)
+- 🖱️ **Tap-to-Earn Mechanic** — Click the validator node to process transactions and earn $RIA
+- ⬆️ **Upgrade System** — 6+ tiers of upgrades from Omni Accounts to VM Clusters
+- 🔥 **Fever Mode** — Tap fast to trigger a temporary earning multiplier
+- 📊 **Staking System** — Stake $RIA for passive income boosts
+- 🏆 **Mission System** — Complete progressive milestones for bonus rewards
+- 🎵 **Sound Effects** — Immersive audio feedback for taps and events
+- 💾 **Auto-Save** — Progress saved automatically to localStorage
+- 📱 **Responsive Design** — Play on desktop, tablet, or mobile
 
-## 📦 Local Setup
+## 🛠️ Tech Stack
 
-No install required. Just open:
+![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=flat-square&logo=html5&logoColor=white)
+![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=flat-square&logo=css3&logoColor=white)
+![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=flat-square&logo=javascript&logoColor=black)
 
-```
-index.html
+- **Frontend:** Vanilla HTML5, CSS3, JavaScript (no frameworks)
+- **Styling:** Dark theme with glassmorphism, CSS animations
+- **Storage:** localStorage for game save data
+- **Hosting:** GitHub Pages
+
+## 🚀 Play
+
+### Online
+👉 **[Play Now — romeototo.github.io/ai-tycoon-rialo-game](https://romeototo.github.io/ai-tycoon-rialo-game/)**
+
+### Local
+```bash
+git clone https://github.com/romeototo/ai-tycoon-rialo-game.git
+cd ai-tycoon-rialo-game
+# Open index.html in your browser
 ```
 
-## 🌐 Deploy to GitHub Pages
+## 🎯 How to Play
 
-1. Push this repository to GitHub
-2. Go to repository Settings → Pages
-3. Set source to deploy from `main` branch
-4. Save and wait for GitHub Pages to publish
+1. **Tap** the Rialo validator node to process transactions
+2. **Earn $RIA** tokens with each tap
+3. **Buy upgrades** to increase your $RIA per second
+4. **Complete missions** to unlock bonuses
+5. **Stake $RIA** for multiplier boosts
+6. **Progress through epochs** as your network grows
 
 ## 📄 License
 
-MIT
+This project is licensed under the [MIT License](LICENSE).
+
+---
+
+<div align="center">
+
+**Made with ❤️ by [RoMEoTOTO](https://github.com/romeototo)**
+
+[![X](https://img.shields.io/badge/@RoMeoT0T0-000?style=flat-square&logo=x&logoColor=white)](https://x.com/RoMeoT0T0)
+[![GitHub](https://img.shields.io/badge/romeototo-181717?style=flat-square&logo=github&logoColor=white)](https://github.com/romeototo)
+
+</div>
