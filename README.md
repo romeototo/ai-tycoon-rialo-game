@@ -1,5 +1,9 @@
 # 💎 Rialo Network Tycoon
 
+<div align="center">
+<i>👉 <a href="README-th.md">🇹🇭 อ่านรายละเอียดภาษาไทย</a></i><br><br>
+</div>
+
 ![Rialo Tycoon Demo](https://raw.githubusercontent.com/romeototo/ai-tycoon-rialo-game/main/screenshot.gif)
 
 A premium, interactive idle/clicker game built for the web. Players build their network infrastructure, generate currency, and unlock powerful upgrades in a highly polished, Web3-inspired UI with smooth animations.
