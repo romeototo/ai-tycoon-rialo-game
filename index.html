@@ -1,45 +1,52 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Rialo Network Tycoon</title>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&family=Outfit:wght@700&display=swap"
-        rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
-</head>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&family=Outfit:wght@700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
 
-<body>
+  <body>
     <!-- Top Bar -->
     <div class="top-bar">
-        <div class="top-left">
-            <div class="goal-text">Goal: Reach 10M $RIA</div>
+      <div class="top-left">
+        <div class="goal-text">Goal: Reach 10M $RIA</div>
+      </div>
+      <div class="top-center">
+        <h2 id="stageName" class="event-title">
+          💎 Validator Slashing Event 💎
+        </h2>
+        <div class="tx-progress-container">
+          <div class="tx-label">Pending Transactions</div>
+          <div class="tx-bar-bg">
+            <div id="hpBar" class="tx-bar-fill"></div>
+          </div>
+          <div id="hpText" class="tx-text">10 / 10 Tx</div>
         </div>
-        <div class="top-center">
-            <h2 id="stageName" class="event-title">💎 Validator Slashing Event 💎</h2>
-            <div class="tx-progress-container">
-                <div class="tx-label">Pending Transactions</div>
-                <div class="tx-bar-bg">
-                    <div id="hpBar" class="tx-bar-fill"></div>
-                </div>
-                <div id="hpText" class="tx-text">10 / 10 Tx</div>
-            </div>
-            <div id="bossTimer" class="slash-timer">Next Slash: 30.0s</div>
-            <div id="eventBanner" class="event-banner">Tap the validator to process transactions</div>
+        <div id="bossTimer" class="slash-timer">Next Slash: 30.0s</div>
+        <div id="eventBanner" class="event-banner">
+          Tap the validator to process transactions
         </div>
-        <div class="top-right">
-            <button id="musicBtn" class="icon-btn" title="Toggle Music">🔇</button>
-            <button id="statsBtn" class="icon-btn" title="Statistics">📊</button>
-            <button id="settingsBtn" class="icon-btn" title="Settings">⚙️</button>
-        </div>
+      </div>
+      <div class="top-right">
+        <button id="musicBtn" class="icon-btn" title="Toggle Music">🔇</button>
+        <button id="statsBtn" class="icon-btn" title="Statistics">📊</button>
+        <button id="settingsBtn" class="icon-btn" title="Settings">⚙️</button>
+      </div>
     </div>
 
     <!-- Save Indicator -->
     <div id="saveIndicator" class="save-indicator">💾 Saved</div>
 
     <!-- Keyboard hint -->
-    <div class="kbd-hint">[ <kbd>Space</kbd> Tap &nbsp;|&nbsp; <kbd>O</kbd> Overclock ]</div>
+    <div class="kbd-hint">
+      [ <kbd>Space</kbd> Tap &nbsp;|&nbsp; <kbd>O</kbd> Overclock ]
+    </div>
 
     <!-- Ambient Background Effects -->
     <div class="bg-orb orb-1"></div>
@@ -47,164 +54,210 @@
     <div class="bg-orb orb-3"></div>
 
     <div class="game-container">
-        <!-- Left Column: Earnings -->
-        <div class="clicker-section">
-            <div class="logo-container">
-                <img src="assets/rialo-logo.svg" alt="Rialo Logo" class="brand-logo">
-            </div>
-            <h1 class="game-title">NETWORK <span class="text-glow">TYCOON</span></h1>
-
-            <div class="score-board">
-                <div class="score-label">TOTAL $RIA EARNED</div>
-                <div class="score-value" id="scoreDisplay">0</div>
-                <div class="tps-value" id="tpsDisplay">0 $RIA / sec</div>
-                <div class="instruction-text">Click the validator node to earn $RIA</div>
-
-                <div class="mission-panel">
-                    <div class="mission-topline">
-                        <span id="missionTitle">Mission 1</span>
-                        <span id="missionReward">+Starter Boost</span>
-                    </div>
-                    <div id="missionText" class="mission-text">Earn 12 $RIA to buy your first Omni Account.</div>
-                    <div class="goal-meter">
-                        <div id="goalFill" class="goal-fill"></div>
-                    </div>
-                    <div id="goalText" class="goal-text-small">0 / 10.00M $RIA</div>
-                </div>
-
-                <div class="combo-display" id="comboDisplay">Combo x1.0! 🔥</div>
-
-                <!-- Achievement Banner -->
-                <div id="achievementBanner" class="achievement-banner" style="display:none;"></div>
-
-                <div class="staking-container">
-                    <button id="stakeBtn" class="stake-btn">Stake 50% for Boost</button>
-                    <div id="stakedAmount">Staked: 0 $RIA | Multiplier: x1.00</div>
-                </div>
-
-                <div class="leaderboard-container">
-                    <h3 class="leaderboard-title">🔥 Top Validators</h3>
-                    <div id="leaderboardList" class="leaderboard-list"></div>
-                </div>
-                
-                <div class="prestige-container" id="prestigeContainer" style="display: none;">
-                    <h3 class="prestige-title">🔄 Network Hard Fork</h3>
-                    <div class="prestige-desc">Reset progress to earn Hashpower!</div>
-                    <button id="prestigeBtn" class="prestige-btn">Hard Fork (+0 Hashpower)</button>
-                    <div class="prestige-stats" id="prestigeStats">Hashpower: 0 (+0% Global Boost)</div>
-                </div>
-
-                <button id="copyScoreBtn" class="copy-score-btn">📋 Share to Discord</button>
-            </div>
+      <!-- Left Column: Earnings -->
+      <div class="clicker-section">
+        <div class="logo-container">
+          <img
+            src="assets/rialo-logo.svg"
+            alt="Rialo Logo"
+            class="brand-logo"
+          />
         </div>
+        <h1 class="game-title">
+          NETWORK <span class="text-glow">TYCOON</span>
+        </h1>
 
-        <!-- Center Column: Validator Node -->
-        <div class="node-section">
-            <div class="node-wrapper">
-                <div class="node-aura" id="nodeAura"></div>
-                <button class="ai-core" id="aiCore">
-                    <img src="assets/rialo-logo.svg" class="node-logo" alt="Rialo Validator Node">
-                    <span class="tap-pulse">TAP</span>
-                </button>
-                <div class="node-label">Validator Node</div>
-                <div id="nodeStatus" class="node-status">Ready</div>
-                <button class="skill-btn" id="overclockBtn">⚡ Overclock!</button>
-                <div class="epoch-progress-wrap">
-                    <div class="epoch-label" id="epochLabel">Epoch 1</div>
-                    <div class="epoch-bar-bg">
-                        <div class="epoch-bar-fill" id="epochFill"></div>
-                    </div>
-                </div>
-            </div>
-        </div>
+        <div class="score-board">
+          <div class="score-label">TOTAL $RIA EARNED</div>
+          <div class="score-value" id="scoreDisplay">0</div>
+          <div class="tps-value" id="tpsDisplay">0 $RIA / sec</div>
+          <div class="instruction-text">
+            Click the validator node to earn $RIA
+          </div>
 
-        <!-- Right Column: Upgrades -->
-        <div class="upgrades-section">
-            <h2 class="section-title">Upgrades</h2>
-            <div class="buy-controls">
-                <button class="buy-mode-btn active" data-amount="1">Buy 1</button>
-                <button class="buy-mode-btn" data-amount="10">Buy 10</button>
-                <button class="buy-mode-btn" data-amount="max">Max</button>
+          <div class="mission-panel">
+            <div class="mission-topline">
+              <span id="missionTitle">Mission 1</span>
+              <span id="missionReward">+Starter Boost</span>
             </div>
-            <div class="upgrades-list" id="upgradesList">
-                <!-- JS injected -->
+            <div id="missionText" class="mission-text">
+              Earn 12 $RIA to buy your first Omni Account.
             </div>
+            <div class="goal-meter">
+              <div id="goalFill" class="goal-fill"></div>
+            </div>
+            <div id="goalText" class="goal-text-small">0 / 10.00M $RIA</div>
+          </div>
+
+          <div class="combo-display" id="comboDisplay">Combo x1.0! 🔥</div>
+
+          <!-- Achievement Banner -->
+          <div
+            id="achievementBanner"
+            class="achievement-banner"
+            style="display: none"
+          ></div>
+
+          <div class="staking-container">
+            <button id="stakeBtn" class="stake-btn">Stake 50% for Boost</button>
+            <div id="stakedAmount">Staked: 0 $RIA | Multiplier: x1.00</div>
+          </div>
+
+          <div class="leaderboard-container">
+            <h3 class="leaderboard-title">🔥 Top Validators</h3>
+            <div id="leaderboardList" class="leaderboard-list"></div>
+          </div>
+
+          <div
+            class="prestige-container"
+            id="prestigeContainer"
+            style="display: none"
+          >
+            <h3 class="prestige-title">🔄 Network Hard Fork</h3>
+            <div class="prestige-desc">Reset progress to earn Hashpower!</div>
+            <button id="prestigeBtn" class="prestige-btn">
+              Hard Fork (+0 Hashpower)
+            </button>
+            <div class="prestige-stats" id="prestigeStats">
+              Hashpower: 0 (+0% Global Boost)
+            </div>
+          </div>
+
+          <button id="copyScoreBtn" class="copy-score-btn">
+            📋 Share to Discord
+          </button>
         </div>
+      </div>
+
+      <!-- Center Column: Validator Node -->
+      <div class="node-section">
+        <div class="node-wrapper">
+          <div class="node-aura" id="nodeAura"></div>
+          <button class="ai-core" id="aiCore">
+            <img
+              src="assets/rialo-logo.svg"
+              class="node-logo"
+              alt="Rialo Validator Node"
+            />
+            <span class="tap-pulse">TAP</span>
+          </button>
+          <div class="node-label">Validator Node</div>
+          <div id="nodeStatus" class="node-status">Ready</div>
+          <button class="skill-btn" id="overclockBtn">⚡ Overclock!</button>
+          <div class="epoch-progress-wrap">
+            <div class="epoch-label" id="epochLabel">Epoch 1</div>
+            <div class="epoch-bar-bg">
+              <div class="epoch-bar-fill" id="epochFill"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Right Column: Upgrades -->
+      <div class="upgrades-section">
+        <h2 class="section-title">Upgrades</h2>
+        <div class="buy-controls">
+          <button class="buy-mode-btn active" data-amount="1">Buy 1</button>
+          <button class="buy-mode-btn" data-amount="10">Buy 10</button>
+          <button class="buy-mode-btn" data-amount="max">Max</button>
+        </div>
+        <div class="upgrades-list" id="upgradesList">
+          <!-- JS injected -->
+        </div>
+      </div>
     </div>
 
     <!-- ===== MODALS ===== -->
 
     <!-- Settings Modal -->
     <div id="settingsModal" class="modal-overlay">
-        <div class="modal-content">
-            <h2>⚙️ Settings</h2>
-            <div class="settings-grid">
-                <button id="resetBtn" class="danger-btn">⚠️ Reset Progress</button>
-            </div>
-            <button id="closeSettingsBtn" class="normal-btn" style="margin-top:10px;">Close</button>
+      <div class="modal-content">
+        <h2>⚙️ Settings</h2>
+        <div class="settings-grid">
+          <button id="resetBtn" class="danger-btn">⚠️ Reset Progress</button>
         </div>
+        <button
+          id="closeSettingsBtn"
+          class="normal-btn"
+          style="margin-top: 10px"
+        >
+          Close
+        </button>
+      </div>
     </div>
 
     <!-- Stats Modal -->
     <div id="statsModal" class="modal-overlay">
-        <div class="modal-content stats-content">
-            <h2>📊 Statistics</h2>
-            <div class="stats-grid" id="statsGrid"></div>
-            <button id="closeStatsBtn" class="normal-btn" style="margin-top:1.5rem;">Close</button>
-        </div>
+      <div class="modal-content stats-content">
+        <h2>📊 Statistics</h2>
+        <div class="stats-grid" id="statsGrid"></div>
+        <button
+          id="closeStatsBtn"
+          class="normal-btn"
+          style="margin-top: 1.5rem"
+        >
+          Close
+        </button>
+      </div>
     </div>
 
     <!-- Hard Fork Confirm Modal -->
     <div id="forkModal" class="modal-overlay">
-        <div class="modal-content fork-content">
-            <div class="fork-icon">🔄</div>
-            <h2>Network Hard Fork</h2>
-            <p id="forkDesc">You will lose all progress but gain permanent Hashpower.</p>
-            <div class="fork-gain" id="forkGain"></div>
-            <div class="modal-btn-row">
-                <button id="forkCancelBtn" class="normal-btn">Cancel</button>
-                <button id="forkConfirmBtn" class="prestige-btn">Confirm Fork</button>
-            </div>
+      <div class="modal-content fork-content">
+        <div class="fork-icon">🔄</div>
+        <h2>Network Hard Fork</h2>
+        <p id="forkDesc">
+          You will lose all progress but gain permanent Hashpower.
+        </p>
+        <div class="fork-gain" id="forkGain"></div>
+        <div class="modal-btn-row">
+          <button id="forkCancelBtn" class="normal-btn">Cancel</button>
+          <button id="forkConfirmBtn" class="prestige-btn">Confirm Fork</button>
         </div>
+      </div>
     </div>
 
     <!-- Reset Confirm Modal -->
     <div id="resetModal" class="modal-overlay">
-        <div class="modal-content">
-            <div class="fork-icon">⚠️</div>
-            <h2>Reset Progress</h2>
-            <p>This will permanently erase all $RIA, upgrades, and Hashpower. Are you sure?</p>
-            <div class="modal-btn-row">
-                <button id="resetCancelBtn" class="normal-btn">Cancel</button>
-                <button id="resetConfirmBtn" class="danger-btn">Yes, Reset</button>
-            </div>
+      <div class="modal-content">
+        <div class="fork-icon">⚠️</div>
+        <h2>Reset Progress</h2>
+        <p>
+          This will permanently erase all $RIA, upgrades, and Hashpower. Are you
+          sure?
+        </p>
+        <div class="modal-btn-row">
+          <button id="resetCancelBtn" class="normal-btn">Cancel</button>
+          <button id="resetConfirmBtn" class="danger-btn">Yes, Reset</button>
         </div>
+      </div>
     </div>
 
     <!-- Offline Earnings Modal -->
     <div id="offlineModal" class="modal-overlay">
-        <div class="modal-content offline-content">
-            <div class="offline-icon">🌙</div>
-            <h2>Welcome Back!</h2>
-            <p id="offlineTimeText">Your validators worked while you were away.</p>
-            <div class="offline-earned" id="offlineEarnedDisplay"></div>
-            <button id="offlineClaimBtn" class="stake-btn" style="margin-top:1rem;">Collect Earnings</button>
-        </div>
+      <div class="modal-content offline-content">
+        <div class="offline-icon">🌙</div>
+        <h2>Welcome Back!</h2>
+        <p id="offlineTimeText">Your validators worked while you were away.</p>
+        <div class="offline-earned" id="offlineEarnedDisplay"></div>
+        <button id="offlineClaimBtn" class="stake-btn" style="margin-top: 1rem">
+          Collect Earnings
+        </button>
+      </div>
     </div>
 
     <!-- Win Modal -->
     <div id="winModal" class="modal-overlay">
-        <div class="modal-content win-content">
-            <img src="assets/rialo-logo.svg" alt="Rialo Logo" class="win-logo">
-            <h2>Mainnet Launch Ready</h2>
-            <p>You reached 10M $RIA and completed the tycoon goal.</p>
-            <button id="keepPlayingBtn" class="normal-btn">Keep Playing</button>
-        </div>
+      <div class="modal-content win-content">
+        <img src="assets/rialo-logo.svg" alt="Rialo Logo" class="win-logo" />
+        <h2>Mainnet Launch Ready</h2>
+        <p>You reached 10M $RIA and completed the tycoon goal.</p>
+        <button id="keepPlayingBtn" class="normal-btn">Keep Playing</button>
+      </div>
     </div>
 
     <div id="toast" class="toast"></div>
 
     <script src="script.js"></script>
-</body>
-
+  </body>
 </html>

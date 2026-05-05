@@ -27,5 +27,6 @@ A premium, interactive idle/clicker game built for the web. Players build their 
 ## 👨‍💻 Developer
 
 **romeototo**
+
 - Portfolio: [romeototo.github.io/resume](https://romeototo.github.io/resume/)
 - GitHub: [@romeototo](https://github.com/romeototo)
